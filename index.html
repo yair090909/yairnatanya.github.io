@@ -1,71 +1,125 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>פורטפוליו ויזואליזציה - יאיר נתניה</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-            color: #333;
-            direction: rtl; /* יישור לימין */
-            text-align: right; /* יישור לימין */
-        }
-        h1, h2 {
-            color: #0056b3;
-        }
-        ul {
-            list-style-type: none; /* מסיר את התבליטים */
-            padding: 0;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פורטפוליו ויזואליזציה - יאיר נתניה</title>
+    <style>
+        /* סגנונות כלליים לגוף האתר */
+        body {
+            font-family: 'Arial', sans-serif; /* גופן כללי */
+            margin: 0; /* מחיקת שוליים ברירת מחדל */
+            padding: 20px; /* ריפוד פנימי מסביב לתוכן */
+            line-height: 1.6; /* רווח שורות נוח לקריאה */
+            color: #333; /* צבע טקסט כללי */
+            direction: rtl; /* כיוון כתיבה מימין לשמאל */
+            text-align: right; /* יישור טקסט לימין */
+            background-color: #f4f7f6; /* צבע רקע בהיר ונעים */
+        }
+
+        /* סגנונות לכותרת ראשית (פרויקט ויזואליזציה של מידע) */
+        h1 {
+            color: #1a4a7a; /* כחול כהה יותר, מקצועי */
+            font-size: 2.5em; /* גודל גופן גדול יותר */
+            text-align: center; /* יישור למרכז */
+            margin-bottom: 30px; /* רווח מתחת לכותרת */
+            padding-bottom: 10px; /* ריפוד תחתון */
+            border-bottom: 2px solid #a6d9f7; /* קו הפרדה עדין */
+        }
+
+        /* סגנונות לכותרות משניות (סוגי הדשבורדים) */
+        h2 {
+            color: #2b7a9f; /* כחול בינוני */
+            font-size: 2em; /* גודל גופן גדול */
+            margin-top: 40px; /* רווח מעל הכותרת */
+            margin-bottom: 20px; /* רווח מתחת לכותרת */
+            text-align: right; /* יישור לימין */
+            border-bottom: 1px solid #d0e8f2; /* קו הפרדה דק */
+            padding-bottom: 5px; /* ריפוד תחתון */
+        }
+
+        /* סגנונות לפסקאות הטקסט */
+        p {
+            max-width: 800px; /* הגבלת רוחב פסקה לקריאות טובה יותר */
+            margin: 0 auto 20px auto; /* מרכוז פסקה ורווח תחתון */
+            padding: 0 10px; /* ריפוד בצדדים */
+            font-size: 1.1em; /* גודל גופן קצת יותר גדול */
+        }
+
+        /* סגנונות לרשימת הדשבורדים */
+        ul {
+            list-style-type: none; /* מסיר את התבליטים */
+            padding: 0;
+            max-width: 800px; /* הגבלת רוחב לרשימה */
+            margin: 0 auto; /* מרכוז הרשימה */
+        }
+
+        li {
+            background-color: #ffffff; /* רקע לבן לפריט רשימה */
+            margin-bottom: 15px; /* רווח בין פריטי הרשימה */
+            padding: 20px; /* ריפוד פנימי */
+            border-radius: 8px; /* פינות מעוגלות */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* צל עדין */
+            border-right: 5px solid #2b7a9f; /* פס כחול בצד ימין */
+            text-align: right;
+        }
+
+        /* סגנונות לטקסט המודגש בתוך פריטי הרשימה (שם הדשבורד) */
+        li strong {
+            display: block; /* להפוך לבלוק נפרד */
+            font-size: 1.3em; /* גודל גופן גדול יותר */
+            color: #1a4a7a; /* צבע כחול כהה */
+            margin-bottom: 10px; /* רווח מתחת לכותרת הדשבורד */
+        }
+
+        /* סגנונות לקישורים */
+        a {
+            color: #007bff; /* כחול בהיר לקישורים */
+            text-decoration: none; /* הסרת קו תחתון */
+            font-weight: bold; /* הדגשת הקישורים */
+            transition: color 0.3s ease; /* אנימציה חלקה לשינוי צבע */
+        }
+
+        a:hover {
+            color: #0056b3; /* שינוי צבע בלחיצה */
+            text-decoration: underline; /* קו תחתון בריחוף */
+        }
+    </style>
 </head>
 <body>
 
-    <h1>פרויקט ויזואליזציה של מידע</h1>
-    <p>
-        ברוכים הבאים לאתר הפורטפוליו של יאיר נתניה, שהוקם במסגרת קורס "ויזואליזציה של מידע".
-        האתר מציג דשבורדים אינטראקטיביים שנבנו ב-Tableau Public, ומטרתם לספק תובנות מגוונות ממערכת מידע פיקטיבית של **רשת אלמ**.
-        המערכות מתארות ניתוח נתונים בתחום המכירות, עם התמקדות בצרכים שונים של משתמשים בארגון.
-    </p>
+    <h1>פרויקט ויזואליזציה של מידע</h1>
+    <p>
+        ברוכים הבאים לאתר הפורטפוליו של יאיר נתניה, שהוקם במסגרת קורס "ויזואליזציה של מידע".
+        האתר מציג דשבורדים אינטראקטיביים שנבנו ב-Tableau Public, ומטרתם לספק תובנות מגוונות ממערכת מידע פיקטיבית של רשת א.ל.מ.
+        המערכות מתארות ניתוח נתונים בתחום המכירות, עם התמקדות בצרכים שונים של משתמשים בארגון.
+    </p>
 
-    <h2>סוגי הדשבורדים:</h2>
-    <ul>
-        <li>
-            <strong>דשבורד ניהולי: ניתוח מכירות והנחות לפי סניף</strong><br>
-            דשבורד זה מיועד למנהלי סניפים וכולל תצוגה מפורטת של נתוני מכירות, השפעת הנחות ופעילות יומית.
-            <br>
-            <a href="https://public.tableau.com/app/profile/yair.natanya/viz/_17531772173310/sheet6?publish=yestarget="_blank">צפה בדשבורד הניהולי</a>
-        </li>
-        <li>
-            <strong>דשבורד תפעולי:ניתוח עסקאות וכמויות לפי תאריך</strong><br>
-            דשבורד זה מיועד למנהלי תפעול ומחסן, ומציג מגמות כמותיות של עסקאות על פני זמן ופילוח לפי סניפים. 
-            <br>
-            <a href=https://public.tableau.com/app/profile/yair.natanya/viz/_17531786907630/Dashboard2?publish=yes target="_blank">צפה בדשבורד התפעולי</a>
-        </li>
-        <li>
-            <strong>דשבורד אסטרטגי: ניתוח מגמות מכירה לאורך זמן</strong><br>
-            דשבורד זה מיועד להנהלה בכירה ומספק סקירה רחבה של ביצועי מכירות ארגוניים ומגמות ארוכות טווח.
-            <br>
-            <a href=https://public.tableau.com/app/profile/yair.natanya/viz/_17531798919440/Dashboard3?publish=yestarget="_blank">צפה בדשבורד האסטרטגי</a>
-        </li>
-    </ul>
+    <h2>סוגי הדשבורדים:</h2>
+    <ul>
+        <li>
+            <strong>דשבורד ניהולי: ניתוח מכירות והנחות לפי סניף</strong><br>
+            דשבורד זה מיועד למנהלי סניפים וכולל תצוגה מפורטת של נתוני מכירות, השפעת הנחות ופעילות יומית.
+            <br>
+            <a href="https://public.tableau.com/app/profile/yair.natanya/viz/_17531772173310/sheet6?publish=yes" target="_blank">צפה בדשבורד הניהולי</a>
+        </li>
+        <li>
+            <strong>דשבורד תפעולי: ניתוח עסקאות וכמויות לפי תאריך</strong><br>
+            דשבורד זה מיועד למנהלי תפעול ומחסן, ומציג מגמות כמותיות של עסקאות על פני זמן ופילוח לפי סניפים.
+            <br>
+            <a href="https://public.tableau.com/app/profile/yair.natanya/viz/_17531786907630/Dashboard2?publish=yes" target="_blank">צפה בדשבורד התפעולי</a>
+        </li>
+        <li>
+            <strong>דשבורד אסטרטגי: ניתוח מגמות מכירה לאורך זמן</strong><br>
+            דשבורד זה מיועד להנהלה בכירה ומספק סקירה רחבה של ביצועי מכירות ארגוניים ומגמות ארוכות טווח.
+            <br>
+            <a href="https://public.tableau.com/app/profile/yair.natanya/viz/_17531798919440/Dashboard3?publish=yes" target="_blank">צפה בדשבורד האסטרטגי</a>
+        </li>
+    </ul>
 
-    <p>
-        פרויקט זה ממחיש את היכולת להפוך נתונים גולמיים למידע חזותי ושימושי, התומך בקבלת החלטות ברמות שונות בארגון.
-    </p>
+    <p>
+        פרויקט זה ממחיש את היכולת להפוך נתונים גולמיים למידע חזותי ושימושי, התומך בקבלת החלטות ברמות שונות בארגון.
+    </p>
 
 </body>
 </html>
